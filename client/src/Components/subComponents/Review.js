@@ -149,11 +149,11 @@ class Review extends Component {
       <div className="review">
         {this.state.initialReviews ? this.showReviews() : ''}
         {this.state.showAll ? this.showAllReviews() : ''}
-        {this.state.showMore ? <button onClick={this.buttonClickAll}>All Reviews</button> : ''}
+        {this.state.showMore ? <Button color='primary' onClick={this.buttonClickAll}>All Reviews</Button> : ''}
         <br/>
         <br/>
         <div class="form-group">
-          <button onClick={this.buttonClickForm}>Leave a Review</button>
+          <Button color='primary' onClick={this.buttonClickForm}>Leave a Review</Button>
           <div class="col align-self-center">
             {this.state.showForm ? (
               <form onSubmit={this.formSubmit}>
@@ -176,7 +176,7 @@ class Review extends Component {
                     this.state.restaurantName
                   }`}
                 />
-                <input type="submit" value="submit" />
+                <input class="btn btn-primary" type="submit" value="submit"/>
               </form>
             ) : (
               ''
